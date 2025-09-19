@@ -1,0 +1,237 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1756466184605
+  modified: 1756466184605
+  description: ""
+collection:
+  - name: Biblioteca
+    meta:
+      id: fld_fe0e569fd5154dfd923927e65c05425f
+      created: 1756466402208
+      modified: 1756466402208
+      sortKey: -1756466402208
+      description: ""
+    children:
+      - name: Usuarios
+        meta:
+          id: fld_cd2fd95a76894bb8b3078f382285425b
+          created: 1756466457707
+          modified: 1756466457707
+          sortKey: -1756466457707
+          description: ""
+      - name: Livros
+        meta:
+          id: fld_819766158200410e8d77ca932ec841c1
+          created: 1756485784788
+          modified: 1756485784788
+          sortKey: -1756485784788
+          description: ""
+  - name: Prova
+    meta:
+      id: fld_16b75269a70b4ae7bc0ca44b5d027f63
+      created: 1758288548604
+      modified: 1758288548604
+      sortKey: -1758288548604
+      description: ""
+    children:
+      - name: Clientes
+        meta:
+          id: fld_32401642f2444be997a295d22ac8cc8f
+          created: 1758288588102
+          modified: 1758288588102
+          sortKey: -1758288588102
+          description: ""
+        children:
+          - url: http://localhost:3000/clientes
+            name: Cadastrar
+            meta:
+              id: req_662b4bc0f5da49cab3584029dd70aa4c
+              created: 1758289012353
+              modified: 1758289550860
+              isPrivate: false
+              description: ""
+              sortKey: -1758289012353
+            method: POST
+            body:
+              mimeType: application/json
+              text: |2-
+                    {
+                        "nome": "Pedro Silva",
+                        "email": "pedrosilva@gmail.com",
+                        "cpf": "738.303.540-29",
+                        "telefone": "19 99638-9287",
+                        "endereço": "Avenida das Oliveiras, 123"
+                    }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/cllientes/738.303.540-29
+            name: Buscar
+            meta:
+              id: req_0d917cd177ed42c2bed09b6207bb01e6
+              created: 1758289377365
+              modified: 1758290550392
+              isPrivate: false
+              description: ""
+              sortKey: -1758289377365
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Produtos
+        meta:
+          id: fld_36bbb377ac004de6845839498a7c7d99
+          created: 1758289688076
+          modified: 1758289688076
+          sortKey: -1758289688076
+          description: ""
+        children:
+          - url: http://localhost:3000/produtos
+            name: Atualizar
+            meta:
+              id: req_1ed686703c75418eb99db85191980653
+              created: 1758289724159
+              modified: 1758291256069
+              isPrivate: false
+              description: ""
+              sortKey: -1758289724159
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |2-
+                 {
+                    "id": "1234",
+                    "nome": "Blusa de algodão básica",
+                    "descrição": "Blusa de algodão básica cinza",
+                    "preço": "70.00",
+                    "estoque": "5"
+                 }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/produtos/1234
+            name: Alterar
+            meta:
+              id: req_ae7a265a78b44805aa3064a85ba0362d
+              created: 1758289806697
+              modified: 1758291394940
+              isPrivate: false
+              description: ""
+              sortKey: -1758289806697
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                    "id": "1234",
+                    "nome": "Blusa de algodão básica",
+                    "descrição": "Blusa de algodão básica cinza",
+                    "preço": "70.00",
+                    "estoque": "5"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/produtos
+            name: Excluir
+            meta:
+              id: req_d25583773c074dde8b77d602dd99f978
+              created: 1758291462157
+              modified: 1758291521062
+              isPrivate: false
+              description: ""
+              sortKey: -1758291462157
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Pedidos
+        meta:
+          id: fld_90e01db7390f4b16856e3633e278bcf2
+          created: 1758289695827
+          modified: 1758289695827
+          sortKey: -1758289695827
+          description: ""
+        children:
+          - url: http://localhost:3000/pedidos
+            name: Atualizar
+            meta:
+              id: req_27cf8c14cd6246e194b5a5d80857a156
+              created: 1758289988108
+              modified: 1758290701349
+              isPrivate: false
+              description: ""
+              sortKey: -1758289988108
+            method: PATCH
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1756466190491
+    modified: 1756466190491
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1756466190487
+    modified: 1756466190487
+    isPrivate: false
